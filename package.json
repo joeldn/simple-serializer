@@ -1,0 +1,39 @@
+{
+  "name": "simple-serializer",
+  "version": "0.0.1",
+  "description": "A simple serialization library for classes",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "pretest": "npm run build",
+    "test": "node lib/index.js",
+    "test:watch": "nodemon -e ts --exec \"npm run test\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joeldn/simple-serializer.git"
+  },
+  "keywords": [
+    "serialization",
+    "json",
+    "classes",
+    "decorator",
+    "typscript"
+  ],
+  "author": "J. de Nes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joeldn/simple-serializer/issues"
+  },
+  "homepage": "https://github.com/joeldn/simple-serializer#readme",
+  "dependencies": {
+    "reflect-metadata": "^0.1.10"
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.18",
+    "@types/reflect-metadata": "0.0.5",
+    "nodemon": "^1.11.0",
+    "tslint": "^5.2.0",
+    "typescript": "^2.3.2"
+  }
+}

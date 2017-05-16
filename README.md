@@ -1,2 +1,2 @@
 # simple-serializer
-A simple serialisation library for JS classes written in Typescript
+A simple serialization library for JS classes written in Typescript

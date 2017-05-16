@@ -1,0 +1,20 @@
+{
+  "extends": "tslint:latest",
+  "rules": {
+    "curly": true,
+    "quotemark": [true, "single", "avoid-escape", "jsx-double"],
+    "ordered-imports": [false],
+    "member-ordering": [false],
+    "trailing-comma": [false],
+    "typedef": [true, "parameter", "property-declaration", "member-variable-declaration"],
+    "max-line-length": [false],
+    "object-literal-sort-keys": [false],
+    "no-namespace": [false],
+    "interface-over-type-literal": [false],
+    "switch-default": [false]
+  },
+  "jsRules": {
+    "curly": true
+  },
+  "rulesDirectory": []
+}
