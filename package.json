@@ -5,9 +5,8 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "tsc",
-    "pretest": "npm run build",
-    "test": "node lib/index.js",
-    "test:watch": "nodemon -e ts --exec \"npm run test\""
+    "test": "mocha --timeout 1000 --reporter spec --compilers ts:ts-node/register 'test/**/*.test.ts'",
+    "test:watch": "mocha -w --timeout 1000 --reporter spec --compilers ts:ts-node/register 'test/**/*.test.ts'"
   },
   "repository": {
     "type": "git",
@@ -30,9 +29,12 @@
     "reflect-metadata": "^0.1.10"
   },
   "devDependencies": {
+    "@types/chai": "^3.5.2",
     "@types/node": "^7.0.18",
     "@types/reflect-metadata": "0.0.5",
-    "nodemon": "^1.11.0",
+    "chai": "^3.5.0",
+    "mocha": "^3.4.1",
+    "ts-node": "^3.0.4",
     "tslint": "^5.2.0",
     "typescript": "^2.3.2"
   }
