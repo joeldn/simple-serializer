@@ -17,7 +17,8 @@
     "json",
     "classes",
     "decorator",
-    "typscript"
+    "typscript",
+    "es7"
   ],
   "author": "J. de Nes",
   "license": "ISC",
