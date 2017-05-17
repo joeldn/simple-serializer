@@ -1,7 +1,7 @@
 {
   "name": "simple-serializer",
-  "version": "0.0.1",
-  "description": "A simple serialization library for classes",
+  "version": "0.1.0",
+  "description": "A simple serialization library for classes, written in Typescript",
   "main": "lib/index.js",
   "scripts": {
     "build": "tsc -p tsconfig-build.json",

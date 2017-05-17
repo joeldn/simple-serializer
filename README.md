@@ -17,7 +17,7 @@ npm test
 
 ### Example usage
 
-```ts
+```js
 import { Serializable, Serialize } from 'simple-serializer';
 
 export default class Foo extends Serializable {
@@ -53,7 +53,7 @@ export default class Foo extends Serializable {
 }
 ```
 calling
-```ts
+```js
 Foo.toJson()
 ```
 returns
