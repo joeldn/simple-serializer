@@ -1,14 +1,15 @@
-import { describe, it, before } from 'mocha';
+import {} from 'mocha';
+
 import { expect } from 'chai';
 
 import Foo from './fixtures/foo';
 
-let foo;
+let foo: Foo;
 
-before(() => {
-  foo = new Foo();
-});
 describe('serializable', () => {
+  before(() => {
+    foo = new Foo();
+  });
   describe('on class', () => {
     it('returns correctly serialized object when calling toJson()', () => {
       expect(JSON.parse(foo.toJson())).to.deep.equal({

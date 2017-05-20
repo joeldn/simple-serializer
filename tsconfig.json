@@ -1,15 +1,19 @@
 {
   "compilerOptions": {
-    "noImplicitAny": false,
-    "module": "commonjs",
-    "target": "es5",
+    "outDir": "lib",
+    "target": "es6",
+    "module": "es6",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "declaration": true,
     "experimentalDecorators": true,
-    "types": ["node"],
-    "lib": ["es5"]
+    "lib": ["es6"],
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "removeComments": true
   },
-  "include": [
-    "./src/**/*.ts",
-    "./test/**/*.ts"
+  "files": [
+    "src/index.ts"
   ],
   "compileOnSave": false
 }

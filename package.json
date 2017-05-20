@@ -4,9 +4,12 @@
   "description": "A simple serialization library for classes, written in Typescript",
   "main": "lib/index.js",
   "scripts": {
-    "build": "tsc -p tsconfig-build.json",
-    "test": "mocha --timeout 1000 --reporter spec --compilers ts:ts-node/register 'test/**/*.test.ts'",
-    "test:watch": "mocha -w --timeout 1000 --reporter spec --compilers ts:ts-node/register 'test/**/*.test.ts'"
+    "clean": "rm -rf lib",
+    "compile": "tsc",
+    "compile:test": "tsc -p tsconfig.test.json",
+    "prepublish": "npm run clean && npm run compile",
+    "pretest": "npm run compile:test",
+    "test": "mocha --reporter spec --full-trace lib/test/index.js"
   },
   "repository": {
     "type": "git",
@@ -14,11 +17,13 @@
   },
   "keywords": [
     "serialization",
+    "serialize",
     "json",
     "classes",
     "decorator",
     "typscript",
-    "es7"
+    "es7",
+    "es2016"
   ],
   "author": "J. de Nes",
   "license": "ISC",
@@ -31,11 +36,11 @@
   },
   "devDependencies": {
     "@types/chai": "^3.5.2",
+    "@types/mocha": "^2.2.41",
     "@types/node": "^7.0.18",
     "@types/reflect-metadata": "0.0.5",
     "chai": "^3.5.0",
     "mocha": "^3.4.1",
-    "ts-node": "^3.0.4",
     "tslint": "^5.2.0",
     "typescript": "^2.3.2"
   }
