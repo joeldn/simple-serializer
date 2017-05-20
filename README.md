@@ -1,7 +1,16 @@
 # Simple Serializer
 A simple serialization library for JS classes to be used in Typescript or ES7 projects.
 
-[![Build Status](https://travis-ci.org/joeldn/simple-serializer.svg?branch=master)](https://travis-ci.org/joeldn/simple-serializer)
+[![NPM version][npm-image]][npm-url]
+[![build status][travis-image]][travis-url]
+[![Test coverage][codecov-image]][codecov-url]
+
+[npm-image]: https://badge.fury.io/js/simple-serializer.svg
+[npm-url]: https://npmjs.org/package/simple-serializer
+[travis-image]: https://travis-ci.org/joeldn/simple-serializer.svg?branch=master
+[travis-url]: https://travis-ci.org/joeldn/simple-serializer
+[codecov-image]: https://codecov.io/github/joeldn/simple-serializer/coverage.svg?branch=master
+[codecov-url]: https://codecov.io/github/joeldn/simple-serializer?branch=master
 
 ## Installation
 
