@@ -3,19 +3,22 @@ A simple serialization library for JS classes to be used in Typescript or ES7 pr
 
 [![Build Status](https://travis-ci.org/joeldn/simple-serializer.svg?branch=master)](https://travis-ci.org/joeldn/simple-serializer)
 
-### Installation
+## Installation
 
-```
-npm install --save simple-serializer
+```bash
+npm install simple-serializer --save
 ```
 
-### Testing
+## Testing
 
-```
+```bash
 npm test
 ```
 
-### Example usage
+## Example usage
+
+Extend your class with the `Serializable` abstract class and add the `Serialize` decorator
+to any parameter you want to have show up in the serialized object.
 
 ```js
 import { Serializable, Serialize } from 'simple-serializer';
@@ -52,11 +55,16 @@ export default class Foo extends Serializable {
   }
 }
 ```
-calling
+
+After creating an instance of your class you can call the `toJson()` function on it.
+
 ```js
-Foo.toJson()
+const foo = new Foo();
+console.log(foo.toJson());
 ```
-returns
+
+For the class instance `foo` this will return the following JSON object:
+
 ```json
 {
   "stringProperty": "bar",
