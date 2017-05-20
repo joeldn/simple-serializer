@@ -1,0 +1,8 @@
+**/.DS_Store
+.gitignore
+.gitattributes
+.travis.yml
+tsconfig.json
+tsconfig-build.json
+tslint.json
+test
