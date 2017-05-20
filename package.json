@@ -1,6 +1,6 @@
 {
   "name": "simple-serializer",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A simple serialization library for classes, written in Typescript",
   "main": "lib/index",
   "typings": "lib/index",
