@@ -1,17 +1,20 @@
 import {} from 'mocha';
-
-import { expect } from 'chai';
+import { expect, assert } from 'chai';
 
 import Foo from './fixtures/foo';
-
-let foo: Foo;
+import FooNonSerializable from './fixtures/fooNonSerializable';
 
 describe('serializable', () => {
-  before(() => {
-    foo = new Foo();
-  });
   describe('on class', () => {
+    it('fails if not extended by Serializable', () => {
+      const fooNS: FooNonSerializable = new FooNonSerializable();
+      Object.keys(fooNS).forEach((key: string) => {
+        return expect(Reflect.hasMetadata('serializable-property', fooNS, key)).to.be.false;
+      });
+    });
+
     it('returns correctly serialized object when calling toJson()', () => {
+      const foo: Foo = new Foo();
       expect(JSON.parse(foo.toJson())).to.deep.equal({
         stringProperty: 'bar',
         booleanProperty: false,

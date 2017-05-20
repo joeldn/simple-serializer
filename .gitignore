@@ -2,3 +2,6 @@ node_modules
 npm-debug.log
 **/.DS_Store
 lib
+coverage
+.nyc_output
+coverage.lcov

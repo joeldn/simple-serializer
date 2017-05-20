@@ -2,14 +2,14 @@
   "name": "simple-serializer",
   "version": "0.1.1",
   "description": "A simple serialization library for classes, written in Typescript",
-  "main": "lib/index.js",
+  "main": "lib/index",
+  "typings": "lib/index",
   "scripts": {
     "clean": "rm -rf lib",
-    "compile": "tsc",
-    "compile:test": "tsc -p tsconfig.test.json",
+    "compile": "tsc -p tsconfig.compile.json",
     "prepublish": "npm run clean && npm run compile",
-    "pretest": "npm run compile:test",
-    "test": "mocha --reporter spec --full-trace lib/test/index.js"
+    "test": "nyc mocha --reporter spec --full-trace 'test/index.ts'",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "repository": {
     "type": "git",
@@ -40,8 +40,28 @@
     "@types/node": "^7.0.18",
     "@types/reflect-metadata": "0.0.5",
     "chai": "^3.5.0",
+    "codecov": "^2.2.0",
     "mocha": "^3.4.1",
+    "nyc": "^10.3.2",
+    "ts-node": "^3.0.4",
     "tslint": "^5.2.0",
     "typescript": "^2.3.2"
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.ts"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "text-summary",
+      "html"
+    ],
+    "sourceMap": true,
+    "instrument": true
   }
 }

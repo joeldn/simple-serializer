@@ -3,6 +3,9 @@
 .gitattributes
 .travis.yml
 tsconfig.json
-tsconfig-build.json
+tsconfig.compile.json
 tslint.json
 test
+coverage
+.nyc_output
+coverage.lcov
