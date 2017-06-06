@@ -40,17 +40,41 @@ describe('serializable', () => {
           "zap": [3, 2, 1]
         }
       }));
-      
-      expect(foo).to.deep.equal({
-        "stringProperty": "zip",
-        "booleanProperty": true,
-        "arrayProperty": ["three", "two", "one"],
-        "numberProperty": 42,
-        "objectProperty": {
-          "zip": "zap",
-          "zap": [3, 2, 1]
-        }
-      });
+      // Have to do Object.assign otherwise deep equals is unhappy because types don't match
+      expect(Object.assign({},foo)).to.deep.equal({
+        stringProperty: 'zip',
+        booleanProperty: true,
+        numberProperty: 42,
+        arrayProperty: [ 'three', 'two', 'one' ],
+        objectProperty: { zip: 'zap', zap: [ 3, 2, 1 ] } });
     });
+  
+    it('throws error when properties are missing during fillFromJson(json)', () => {
+      const foo: Foo = new Foo();
+      
+      expect(() =>
+        foo.fillFromJson(JSON.stringify({
+          "booleanProperty": true
+        }))
+      ).to.throw('must be provided');
+    });
+  
+    it('throws error when properties have wrong types during fillFromJson(json)', () => {
+      const foo: Foo = new Foo();
+    
+      expect(() =>
+        foo.fillFromJson(JSON.stringify({
+          "stringProperty": "zip",
+          "booleanProperty": "A STRING!",
+          "differentArrayProperty": ["three", "two", "one"],
+          "objectProperty": {
+            "zip": "zap",
+            "zap": [3, 2, 1]
+          }
+        }))
+      ).to.throw('should be of type')
+      
+    });
+    
   });
 });
