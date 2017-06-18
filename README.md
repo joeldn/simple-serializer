@@ -86,8 +86,8 @@ For the class instance `foo` this will return the following JSON object:
 }
 ```
 
-You can also populate an instance of your class from json by creating an instance of your class and calling the `fillFromJson()` function on it.
- (this requires emitDecoratorMetadata to be set in your tsconfig).
+You can also populate an instance of your class from json by creating it and calling the `fillFromJson()` function
+ (this requires `emitDecoratorMetadata` to be set to `true` in your tsconfig).
 
 ```js
 const foo = new Foo();
