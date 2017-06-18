@@ -11,14 +11,13 @@ export function Serialize(identifier?: string) {
     if (!Serializable.prototype.isPrototypeOf(target)) {
       return;
     }
-    
-    let jsonKey = identifier || key;
-    
+
+    const jsonKey = identifier || key;
     Reflect.defineMetadata(serializableKey, jsonKey, target, key);
-    
-    let deserializationMap = Reflect.getMetadata(deserializationKey, target) || new Map();
+
+    const deserializationMap = Reflect.getMetadata(deserializationKey, target) || new Map();
     deserializationMap.set(jsonKey, key);
-    Reflect.defineMetadata(deserializationKey, deserializationMap, target)
+    Reflect.defineMetadata(deserializationKey, deserializationMap, target);
   };
 
 }
