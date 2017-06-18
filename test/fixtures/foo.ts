@@ -3,29 +3,16 @@ import { Serializable, Serialize } from '../../src';
 export default class Foo extends Serializable {
 
   @Serialize()
-  private stringProperty: string;
+  public stringProperty: string;
 
   @Serialize()
-  private booleanProperty: boolean;
+  public booleanProperty: boolean;
 
-  private numberProperty: number;
+  public numberProperty: number;
 
   @Serialize('differentArrayProperty')
-  private arrayProperty: string[];
+  public arrayProperty: string[];
 
   @Serialize()
-  private objectProperty: { [key: string]: string | number[] };
-
-  constructor() {
-    super();
-
-    this.stringProperty = 'bar';
-    this.booleanProperty = false;
-    this.numberProperty = 42;
-    this.arrayProperty = ['one', 'two', 'three'];
-    this.objectProperty = {
-      foo: 'bar',
-      bar: [1, 2, 3]
-    };
-  }
+  public objectProperty: { [key: string]: string | number[] };
 }
