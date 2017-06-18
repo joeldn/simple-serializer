@@ -85,3 +85,19 @@ For the class instance `foo` this will return the following JSON object:
   }
 }
 ```
+
+You can also populate an instance of your class from json by creating an instance of your class and calling the `fillFromJson()` function on it.
+ (this requires emitDecoratorMetadata to be set in your tsconfig).
+
+```js
+const foo = new Foo();
+foo.fillFromJson(JSON.stringify({
+  "stringProperty": "zip",
+  "booleanProperty": true,
+  "differentArrayProperty": ["three", "two", "one"],
+  "objectProperty": {
+    "zip": "zap",
+    "zap": [3, 2, 1]
+  }
+}))
+```

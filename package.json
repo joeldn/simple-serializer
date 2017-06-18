@@ -36,6 +36,7 @@
   },
   "devDependencies": {
     "@types/chai": "^3.5.2",
+    "@types/core-js": "^0.9.41",
     "@types/mocha": "^2.2.41",
     "@types/node": "^7.0.18",
     "@types/reflect-metadata": "0.0.5",

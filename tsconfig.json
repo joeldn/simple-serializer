@@ -1,12 +1,16 @@
 {
   "compilerOptions": {
     "outDir": "lib",
-    "target": "es6",
+    "lib": ["es7"],
+    "target": "es5",
     "moduleResolution": "node",
     "sourceMap": true,
     "declaration": true,
     "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "strictNullChecks": true,
+    "alwaysStrict": true,
+    "strict": true,
     "noImplicitAny": true,
     "removeComments": true
   },
