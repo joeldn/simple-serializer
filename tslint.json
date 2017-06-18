@@ -8,10 +8,11 @@
     "trailing-comma": [false],
     "typedef": [true, "parameter", "property-declaration", "member-variable-declaration"],
     "max-line-length": [false],
-    "object-literal-sort-keys": [false],
+    "object-literal-sort-keys": false,
     "no-namespace": [false],
     "interface-over-type-literal": [false],
-    "switch-default": [false]
+    "switch-default": false,
+    "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore"]
   },
   "jsRules": {
     "curly": true

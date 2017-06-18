@@ -12,10 +12,13 @@
     "alwaysStrict": true,
     "strict": true,
     "noImplicitAny": true,
-    "removeComments": true
+    "removeComments": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true
   },
-  "files": [
-    "src/index.ts"
+  "include": [
+    "src/**/*.ts",
+    "test/**/*.ts"
   ],
   "compileOnSave": false
 }

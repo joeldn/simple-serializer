@@ -8,8 +8,9 @@
     "clean": "rm -rf lib",
     "compile": "tsc -p tsconfig.compile.json",
     "prepublish": "npm run clean && npm run compile",
-    "test": "nyc mocha --reporter spec --full-trace 'test/index.ts'",
-    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
+    "test": "nyc mocha --reporter spec --full-trace 'test/index.ts' && npm run lint",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "lint": "tslint --type-check --project tsconfig.json"
   },
   "repository": {
     "type": "git",
