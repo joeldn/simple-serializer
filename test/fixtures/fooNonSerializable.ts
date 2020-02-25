@@ -3,10 +3,10 @@ import { Serialize } from '../../src';
 export default class FooNonSerializable {
 
   @Serialize()
-  private stringProperty: string;
+  public stringProperty: string;
 
   @Serialize()
-  private booleanProperty: boolean;
+  public booleanProperty: boolean;
 
   constructor() {
     this.stringProperty = 'bar';

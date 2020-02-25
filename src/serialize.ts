@@ -7,7 +7,7 @@ const deserializationKey = 'deserializable-properties';
 
 export function Serialize(identifier?: string) {
 
-  return function Serialize(target: any, key: string) {
+  return (target: any, key: string) => {
     if (!Serializable.prototype.isPrototypeOf(target)) {
       return;
     }

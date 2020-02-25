@@ -15,4 +15,13 @@ export default class Foo extends Serializable {
 
   @Serialize()
   public objectProperty: { [key: string]: string | number[] };
+
+  constructor() {
+    super();
+    this.stringProperty = 'bar';
+    this.booleanProperty = false;
+    this.numberProperty = 42;
+    this.arrayProperty = ['foo', 'bar'];
+    this.objectProperty = {};
+  }
 }
