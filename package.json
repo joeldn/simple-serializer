@@ -43,8 +43,8 @@
     "@types/reflect-metadata": "0.0.5",
     "chai": "^3.5.0",
     "codecov": "^3.6.5",
-    "mocha": "^3.4.1",
-    "nyc": "^10.3.2",
+    "mocha": "^7.0.1",
+    "nyc": "^15.0.0",
     "ts-node": "^3.0.4",
     "tslint": "^5.2.0",
     "typescript": "^2.3.2"
