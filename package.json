@@ -10,7 +10,7 @@
     "prepublish": "npm run clean && npm run compile",
     "test": "nyc mocha --reporter spec --full-trace 'test/index.ts' && npm run lint",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
-    "lint": "tslint --type-check --project tsconfig.json"
+    "lint": "tslint --project tsconfig.json"
   },
   "repository": {
     "type": "git",

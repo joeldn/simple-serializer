@@ -12,7 +12,8 @@
     "no-namespace": [false],
     "interface-over-type-literal": [false],
     "switch-default": false,
-    "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore"]
+    "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore"],
+    "no-implicit-dependencies": [true, "dev"]
   },
   "jsRules": {
     "curly": true
